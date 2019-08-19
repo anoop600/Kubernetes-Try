@@ -23,19 +23,3 @@ spec:
           ports:
             - containerPort: 80
               protocol: TCP
-			  
----
-
-apiVersion: v1
-kind: Service
-metadata:
-    name: nginx
-    labels: 
-        role: nginx
-spec:
-    selector: 
-        role: nginx
-    ports:
-        - port: 80
-          targetPort: 80
-    type: LoadBalancer
